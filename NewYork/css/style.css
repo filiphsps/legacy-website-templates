@@ -1,0 +1,273 @@
+@font-face {
+	font-family: 'SegoeMDL2';
+	src: url('../font/segmdl2-webfont.woff2') format("woff2"), url("../font/segmdl2-webfont.woff") format("woff"), url('../font/segmdl2-webfont.tff') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: url('../img/title.jpg') center fixed;
+	background-size: cover;
+    color: #fff;
+    font-family: 'Open Sans';
+}
+
+/* Header
+=============================*/
+header{
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+	background: url('../img/title.jpg') center fixed;
+	background-size: cover;
+}
+header .container{
+	height: 100%;
+    width: 100%;
+	background-color: rgba(0, 0, 0, 0.15);
+}
+header .logo img{
+    float: left;
+    margin-left: 110px;
+    margin-top: 10px;
+    height: 45px;
+}
+header nav{
+    float: right;
+    margin-right: 125px;
+}
+header nav .menu-toggle{
+    display: none;
+}
+header nav ul{
+    list-style: none;
+    line-height: 30px;
+}
+header nav ul li {
+    display: inline;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #999;
+    text-transform: uppercase;
+    padding-left: 45px;
+}
+header nav ul li a{
+    color: #999;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    color: white;
+}
+
+/* Main Page
+=============================*/
+#title{
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.15);
+}
+#title h1{
+	line-height: 110px;
+	font-size: 54px;
+	font-weight: 100;
+	font-family: 'Raleway';
+	text-transform: uppercase;
+	color: white;
+}
+#title h1 a{
+	color: white;
+}
+#title h2{
+	line-height: 0;
+	font-size: 24px;
+	font-weight: 100;
+	font-family: 'Raleway';
+	text-transform: lowercase;
+	color: white;
+}
+article{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+	padding-bottom: 10px;
+    width: calc(100% - 30px);
+	max-width: 1124px;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#main{
+	width: 100%;
+	padding-right: 15px;
+	height: 100%;
+	float: left;
+}
+#main .post{
+	margin-bottom: 85px;
+	padding: 15px;
+	padding-top: 0;
+}
+#main .post .title{
+	font-size: 42px;
+	font-family: 'Raleway';
+	font-weight: 300;
+	text-transform: uppercase;
+}
+#main .post:nth-of-type(2n) .title{
+	padding-right: 15px;
+	text-align: right;
+}
+#main .post .banner img{
+	width: 50%;
+	max-width: 470px;
+	float: left;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+#main .post:nth-of-type(2n) .banner img{
+	float: right;
+}
+
+#main .post .content{
+	width: auto;
+	font-size: 18px;
+}
+
+/* Footer
+=============================*/
+footer{
+    min-height: 220px;
+	height: auto;
+    width: 100%;
+	padding-bottom: 5px;
+    background-color: #2c3e50;
+}
+footer .block{
+    width: 25%;
+    min-height: 205px;
+    float: left;
+}
+footer .block h3{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 100;
+	font-family: 'Raleway';
+	text-transform: uppercase;
+}
+footer .block li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer .block a{
+    color: white;
+    text-decoration: none;
+}
+footer .block a:hover{
+    color: rgba(255, 255, 255, 0.75);
+}
+footer .copyright{
+    margin-left: 5px;
+    line-height: 15px;
+    height: 15px;
+    font-size: 14px;
+    font-weight: 300;
+}
+footer .copyright a{
+    color: white;
+    text-decoration: none;
+}
+@media screen and (max-width: 845px){
+    header .logo img{
+        margin-left: 10px;
+        margin-top: 10px;
+		height: auto;
+        width: 200px;
+    }
+    header nav .menu-toggle{
+        display: initial;
+        position: fixed;
+        right: 5px;
+        top: 0;
+        font-size: 36px;
+        line-height: 65px;
+        font-family: 'SegoeMDL2';
+        color: #fff;
+        -webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+    }
+	header nav{
+		position: fixed;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		margin: 0;
+		-webkit-transition: all 200ms ease-in-out;
+        -moz-transition: all 200ms ease-in-out;
+        -o-transition: all 200ms ease-in-out;
+        -ms-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+	}
+	header .open{
+		top: 65px;
+	}
+	header nav ul{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		background: url('../img/title.jpg') center fixed;
+		background-size: cover;
+	}
+	header nav ul li {
+		display: block;
+		width: 100%;
+		height: 35px;
+		padding: 0;
+		margin: 0;
+		background-color: rgba(0, 0, 0, 0.15);
+		text-align: center;
+	}
+	#title{
+		margin-top: 65px;
+		height: 80px;
+	}
+	#title h1{
+		font-size: 26px;
+		line-height: 80px;
+	}
+	#title h2{
+		display: none;
+	}
+	#main{
+		max-width: 100%;
+		padding: none;
+		border-right: none;
+	}
+	#main .post .banner img{
+		width: 100%;
+		max-width: 100%;
+	}
+	#main .post:nth-of-type(2n) .title{
+		padding-right: 0;
+		text-align: left;
+	}
+	#main .post:nth-of-type(2n) .banner img{
+		float: left;
+	}
+	footer .block{
+        width: 100%;
+        border-bottom: 1px solid white;
+    }
+}
