@@ -3,6 +3,9 @@
 	by filfat Studios AB
 	--------------------
 	
+	ACCENT:
+		PRIMARY (light): #3498db
+		SECONDARY (dark): #2980b9
 	BACKGROUND: '../img/title.jpg';
 */
 @font-face {
@@ -17,10 +20,9 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
-    background: url('../img/title.jpg') center fixed;
-	background-size: cover;
-    color: #fff;
-    font-family: 'Open Sans';
+    background: #ecf0f1;
+    color: black;
+    font-family: 'Roboto';
 }
 
 /* Header
@@ -31,23 +33,20 @@ header{
     position: fixed;
     left: 0;
     top: 0;
-	background: url('../img/title.jpg') center fixed;
-	background-size: cover;
+	background: #3498db;
+	z-index: 10;
 }
-header .container{
-	height: 100%;
-    width: 100%;
-	background-color: rgba(0, 0, 0, 0.15);
-}
-header .logo img{
+header .logo h1{
     float: left;
-    margin-left: 110px;
-    margin-top: 10px;
-    height: 45px;
+	font-size:  26px;
+	line-height: 32px;
+	margin-left: 65px;
+	font-weight: 300;
+	color: white;
 }
 header nav{
     float: right;
-    margin-right: 125px;
+    margin-right: 65px;
 }
 header nav .menu-toggle{
     display: none;
@@ -61,33 +60,38 @@ header nav ul li {
     list-style-type: none;
     font-size: 18px;
     font-weight: 500;
-    color: #999;
+    color: white;
     text-transform: uppercase;
     padding-left: 45px;
 }
 header nav ul li a{
-    color: #999;
+    color: white;
     text-decoration: none;
 }
 header nav ul li a:hover{
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* Main Page
 =============================*/
 /* Banner */
 #title{
+	position: absolute;
 	width: 100%;
-	height: 200px;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.15);
+	height: 280px;
+	top: 0;
+	text-align: left;
+	background: #3498db;
+}
+#title .con{
+	padding-left: 65px;
 }
 #title h1{
 	line-height: 110px;
 	font-size: 54px;
 	font-weight: 100;
-	font-family: 'Raleway';
-	text-transform: uppercase;
+	font-family: 'Roboto';
+	text-transform: capitalize;
 	color: white;
 }
 #title h1 a{
@@ -97,7 +101,7 @@ header nav ul li a:hover{
 	line-height: 0;
 	font-size: 24px;
 	font-weight: 100;
-	font-family: 'Raleway';
+	font-family: 'Roboto';
 	text-transform: lowercase;
 	color: white;
 }
@@ -106,7 +110,7 @@ header nav ul li a:hover{
 article{
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 15px;
+    padding-top: 295px;
 	padding-bottom: 10px;
     width: calc(100% - 30px);
 	max-width: 1124px;
@@ -131,21 +135,21 @@ article{
 }
 #main .post .title{
 	font-size: 42px;
-	font-family: 'Raleway';
+	font-family: 'Roboto';
 	font-weight: 300;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 #main .post .title a{
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 #main .post .title a:hover{
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(0, 0, 0, 0.65);
 }
 #main .post .date{
 	font-size: 18px;
 	line-height: 0;
-	font-family: 'Open Sans';
+	font-family: 'Roboto';
 	font-weight: 300;
 	text-transform: uppercase;
 }
@@ -172,15 +176,16 @@ article{
 /* Footer
 =============================*/
 footer{
-    min-height: 220px;
+    min-height: 200px;
 	height: auto;
     width: 100%;
 	padding-bottom: 5px;
-    background-color: #2c3e50;
+    background-color: #3498db;
 	overflow: hidden;
+	color: white;
 }
 footer .block{
-    width: 25%;
+    width: 50%;
     min-height: 205px;
     float: left;
 }
@@ -188,7 +193,7 @@ footer .block h3{
     font-size: 22px;
     text-align: center;
     font-weight: 100;
-	font-family: 'Raleway';
+	font-family: 'Roboto';
 	text-transform: uppercase;
 }
 footer .block li{
@@ -205,8 +210,8 @@ footer .block a:hover{
 }
 footer .copyright{
     margin-left: 5px;
-    line-height: 0;
-    height: 15px;
+    line-height: 0px;
+    height: 18px;
     font-size: 14px;
     font-weight: 300;
 }
@@ -217,34 +222,14 @@ footer .copyright a{
 
 /* Responsiveness
 =============================*/
-/* Small Desktop or Tablet */
-@media screen and (max-width: 1340px){
-	header .logo img{
-        margin-left: 10px;
-        margin-top: 10px;
-		height: auto;
-        width: 200px;
-    }
-	header nav{
-		float: right;
-		margin-right: 10px;
-	}
-}
-
 /* Mobile */
 @media screen and (max-width: 845px){
-    header .logo img{
-        margin-left: 10px;
-        margin-top: 10px;
-		height: auto;
-        width: 200px;
-    }
     header nav .menu-toggle{
         display: initial;
         position: fixed;
-        right: 5px;
+        left: 20px;
         top: 0;
-        font-size: 36px;
+        font-size: 26px;
         line-height: 65px;
         font-family: 'SegoeMDL2';
         color: #fff;
@@ -257,38 +242,39 @@ footer .copyright a{
     }
 	header nav{
 		position: fixed;
-		top: 100%;
-		left: 0;
-		width: 100%;
+		top: 65px;
+		left: -100%;
+		width: 75%;
+		max-width: 250px;
+		height: 100%;
 		margin: 0;
 		-webkit-transition: all 200ms ease-in-out;
         -moz-transition: all 200ms ease-in-out;
         -o-transition: all 200ms ease-in-out;
         -ms-transition: all 200ms ease-in-out;
         transition: all 200ms ease-in-out;
+		background: #3498db;
 	}
 	header .open{
-		top: 65px;
+		left: 0;
 	}
 	header nav ul{
 		width: 100%;
 		padding: 0;
 		margin: 0;
-		background: url('../img/title.jpg') center fixed;
-		background-size: cover;
 	}
 	header nav ul li {
 		display: block;
 		width: 100%;
-		height: 35px;
+		height: 24px;
 		padding: 0;
 		margin: 0;
-		background-color: rgba(0, 0, 0, 0.15);
-		text-align: center;
+		padding-left: 25px;
+		font-size: 18px;
+		text-align: left;
 	}
 	#title{
-		margin-top: 65px;
-		height: 80px;
+		height: 65px;
 	}
 	#title h1{
 		font-size: 26px;
@@ -296,6 +282,9 @@ footer .copyright a{
 	}
 	#title h2{
 		display: none;
+	}
+	article{
+	    padding-top: 45px;
 	}
 	#main{
 		max-width: 100%;
