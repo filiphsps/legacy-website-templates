@@ -1,0 +1,340 @@
+/*
+	New York
+	by filfat Studios AB
+	--------------------
+	
+	ACCENT:
+		PRIMARY (light): #3498db
+		SECONDARY (dark): #2980b9
+	BACKGROUND: '../img/title.jpg';
+*/
+@font-face {
+	font-family: 'SegoeMDL2';
+	src: url('../font/segmdl2-webfont.woff2') format("woff2"), url("../font/segmdl2-webfont.woff") format("woff"), url('../font/segmdl2-webfont.tff') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #ecf0f1;
+    color: #000;
+    font-family: 'Open Sans';
+}
+
+/* Header
+=============================*/
+header{
+    height: 115px;
+    width: 100%;
+    left: 0;
+    top: 0;
+	background: #9b59b6;
+	z-index: 10;
+}
+header .logo h1{
+    float: left;
+	font-size:  46px;
+	line-height: 60px;
+	margin-left: 65px;
+	font-weight: 300;
+	color: white;
+}
+header nav{
+	position: absolute;
+	top: 64px; right: 15px;
+    float: right;
+	will-change: transform;
+}
+header .menu-toggle{
+    display: none;
+}
+header nav ul{
+    list-style: none;
+    line-height: 30px;
+}
+header nav ul li {
+    display: inline-block;
+	height: 65px;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    padding-right: 45px;
+}
+header nav ul li a{
+	border-radius: 5px 5px 0 0; 
+	padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+header nav ul li.selected a{
+	background: #ecf0f1;
+	color: #000;
+}
+header nav ul li a:hover{
+	color: #ecf0f1;
+	background: none;
+}
+
+/* Main Page
+=============================*/
+/* Page Container*/
+article{
+    padding: 15px;
+    width: calc(100% - 30px);
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* Main Content */
+#main{
+	width: 100%;
+	padding-right: 15px;
+	height: 100%;
+	float: left;
+}
+
+/* Blog Entry */
+#main .post{
+	margin-bottom: 85px;
+	padding: 15px;
+	padding-top: 0;
+}
+#main .post .title{
+	font-size: 42px;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	text-transform: capitalize;
+}
+#main .post .title a{
+	color: #000;
+	text-decoration: none;
+}
+#main .post .title a:hover{
+	color: rgba(0, 0, 0, 0.65);
+}
+#main .post .date{
+	font-size: 18px;
+	line-height: 0;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	text-transform: uppercase;
+}
+#main .post:nth-of-type(2n) .title, #main .post:nth-of-type(2n) .date{
+	padding-right: 15px;
+	text-align: right;
+}
+#main .post .banner img{
+	width: 50%;
+	max-width: 470px;
+	float: left;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+#main .post:nth-of-type(2n) .banner img{
+	float: right;
+}
+
+#main .post .content{
+	width: auto;
+	font-size: 18px;
+}
+
+/* Footer
+=============================*/
+footer{
+    min-height: 200px;
+    width: 100%;
+	padding-bottom: 5px;
+    background-color: #64307A;
+	overflow: hidden;
+	color: white;
+}
+footer .banner{
+	height: 60px;
+	width: 100%;
+	padding: 40px 0;
+	background: #472256;
+	text-align: center;
+}
+footer .banner .action{
+	width: 250px;
+	height: 50px;
+	margin: 0 auto;
+	border: 3px solid #fff;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+footer .banner .action:hover{
+	background: white;
+}
+footer .banner .action a{
+	line-height: 50px;
+	font-size: 28px;
+	font-weight: 300;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+footer .banner .action:hover a{
+	color: black;
+}
+footer .block{
+    width: 25%;
+    min-height: 205px;
+    float: left;
+}
+footer .block h3{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 100;
+	font-family: 'Open Sans';
+	text-transform: uppercase;
+}
+footer .block li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer .block a{
+    color: white;
+    text-decoration: none;
+}
+footer .block a:hover{
+    color: rgba(255, 255, 255, 0.75);
+}
+footer .copyright{
+    margin-left: 5px;
+    line-height: 0;
+    height: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+footer .copyright a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsiveness
+=============================*/
+/* Mobile */
+@media screen and (max-width: 845px){
+	header{
+    	height: 65px;
+	}
+	header #search{
+		right: 0; top: 10px;
+	}
+	header .logo h1{
+		font-size:  32px;
+		line-height: 25px;
+	}
+    header .menu-toggle{
+		z-index: 9999;
+        display: initial;
+        position: absolute;
+        left: 20px;
+        top: 0;
+        font-size: 26px;
+        line-height: 65px;
+        font-family: 'SegoeMDL2';
+        color: #fff;
+        -webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+    }
+	header nav{
+		position: absolute;
+		top: 65px;
+		left: -100%;
+		width: 75%;
+		max-width: 250px;
+		height: 100%;
+		margin: 0;
+		-webkit-transition: all 200ms ease-in-out;
+        -moz-transition: all 200ms ease-in-out;
+        -o-transition: all 200ms ease-in-out;
+        -ms-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+		background: #9b59b6;
+	}
+	header .open{
+		left: 0;
+	}
+	header nav ul{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	header nav ul li {
+		display: block;
+		width: calc(100% - 25px);
+		height: 35px;
+		padding: 0;
+		margin: 0;
+		padding-left: 25px;
+		font-size: 18px;
+		text-align: left
+	}
+	header nav ul li a{
+		padding: 0;
+		line-height: 35px;
+		height: 35px;
+	}
+	header nav ul li.selected{
+		background: #9b59b6;
+		color: #fff;
+	}
+	header nav ul li.selected a{
+		background: none;
+	}
+	#title{
+		height: 65px;
+	}
+	#title h1{
+		font-size: 26px;
+		line-height: 80px;
+	}
+	#title h2{
+		display: none;
+	}
+	article{
+	    padding-top: 45px;
+	}
+	#main{
+		max-width: 100%;
+		padding: none;
+		border-right: none;
+	}
+	#main .post .banner img{
+		width: 100%;
+		max-width: 100%;
+	}
+	#main .post:nth-of-type(2n) .title, #main .post:nth-of-type(2n) .date{
+		padding-right: 0;
+		text-align: left;
+	}
+	#main .post:nth-of-type(2n) .banner img{
+		float: left;
+	}
+	footer .block{
+        width: 100%;
+    }
+}
