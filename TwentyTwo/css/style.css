@@ -1,5 +1,5 @@
 /*
-	Coderish
+	TwentyTwo
 	by filfat Studios AB
 	--------------------
 */
@@ -15,9 +15,10 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
-    background: #22A7F0;
-    color: #fff;
-    font-family: 'Roboto';
+    background: url('../img/title.jpg') center fixed;
+	background-size: cover;
+    color: #FFF;
+    font-family: 'Open Sans';
 }
 
 /* Header
@@ -28,21 +29,23 @@ header{
     position: fixed;
     left: 0;
     top: 0;
-	background: #2C3E50;
-	z-index: 10;
+	background: url('../img/title.jpg') center fixed;
+	background-size: cover;
 }
-header .logo h1{
+header .container{
+	height: 100%;
+    width: 100%;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+header .logo img{
     float: left;
-	font-size:  26px;
-	line-height: 32px;
-	margin-left: 65px;
-	font-weight: 300;
-	color: white;
+    margin-left: 110px;
+    margin-top: 10px;
+    height: 45px;
 }
 header nav{
     float: right;
-    margin-right: 65px;
-	will-change: transform;
+    margin-right: 125px;
 }
 header nav .menu-toggle{
     display: none;
@@ -56,38 +59,77 @@ header nav ul li {
     list-style-type: none;
     font-size: 18px;
     font-weight: 500;
-    color: white;
     text-transform: uppercase;
     padding-left: 45px;
 }
 header nav ul li a{
-	padding: 23px 15px;
-    color: white;
+    color: #777;
     text-decoration: none;
-	-webkit-transition: all 150ms ease-in-out;
-	-moz-transition: all 150ms ease-in-out;
-	-o-transition: all 150ms ease-in-out;
-	-ms-transition: all 150ms ease-in-out;
-	transition: all 150ms ease-in-out;
-}
-header nav ul li.selected a{
-	background: #22A7F0;
 }
 header nav ul li a:hover{
-	color: #22A7F0;
-	background: none;
+    color: white;
 }
 
 /* Main Page
 =============================*/
+/* Banner */
+#title{
+	width: 100%;
+	height: 350px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+#title .button{
+	display: block;
+	position: absolute;
+	width: 200px;
+	margin: 0 auto;
+	font-size: 24px;
+	line-height: 45px;
+	text-decoration: none;
+	border: 2px solid #fff;
+	color: #fff;
+	-webkit-transition: all 400ms;
+	transition: all 400ms;
+}
+#title .button:hover.main{
+	border-color: #3AC400;
+	background: #3AC400;
+}
+#title .button:hover.second{
+	border-color: #7F7F7F;
+	background: #7F7F7F;
+}
+#title h1{
+	padding: 45px 0 0 0;
+	line-height: 110px;
+	font-size: 54px;
+	font-weight: 500;
+	font-family: 'Raleway';
+	text-transform: uppercase;
+	color: white;
+}
+#title h1 a{
+	color: white;
+}
+#title h2{
+	line-height: 0;
+	font-size: 24px;
+	font-weight: 100;
+	font-family: 'Raleway';
+	text-transform: lowercase;
+	color: white;
+	padding-bottom: 15px;
+}
+
 /* Page Container*/
 article{
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 75px;
+    padding-top: 15px;
 	padding-bottom: 10px;
     width: calc(100% - 30px);
-	max-width: 1200px;
+	max-width: 1124px;
 	height: 100%;
 	margin: 0 auto;
 	overflow: hidden;
@@ -109,12 +151,12 @@ article{
 }
 #main .post .title{
 	font-size: 42px;
-	font-family: 'Roboto';
+	font-family: 'Raleway';
 	font-weight: 300;
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 #main .post .title a{
-	color: #fff;
+	color: white;
 	text-decoration: none;
 }
 #main .post .title a:hover{
@@ -123,7 +165,7 @@ article{
 #main .post .date{
 	font-size: 18px;
 	line-height: 0;
-	font-family: 'Roboto';
+	font-family: 'Open Sans';
 	font-weight: 300;
 	text-transform: uppercase;
 }
@@ -150,18 +192,18 @@ article{
 /* Footer
 =============================*/
 footer{
-    min-height: 200px;
+    min-height: 220px;
+	height: auto;
     width: 100%;
 	padding-bottom: 5px;
-    background-color: #34495E;
+    background-color: #1E2B38;
 	overflow: hidden;
-	color: white;
 }
 footer .banner{
 	height: 60px;
 	width: 100%;
 	padding: 40px 0;
-	background: #485B6E;
+	background: #263647;
 	text-align: center;
 }
 footer .banner .action{
@@ -198,7 +240,7 @@ footer .block h3{
     font-size: 22px;
     text-align: center;
     font-weight: 100;
-	font-family: 'Roboto';
+	font-family: 'Raleway';
 	text-transform: uppercase;
 }
 footer .block li{
@@ -215,8 +257,8 @@ footer .block a:hover{
 }
 footer .copyright{
     margin-left: 5px;
-    line-height: 0px;
-    height: 18px;
+    line-height: 0;
+    height: 15px;
     font-size: 14px;
     font-weight: 300;
 }
@@ -227,14 +269,34 @@ footer .copyright a{
 
 /* Responsiveness
 =============================*/
+/* Small Desktop or Tablet */
+@media screen and (max-width: 1340px){
+	header .logo img{
+        margin-left: 10px;
+        margin-top: 10px;
+		height: auto;
+        width: 200px;
+    }
+	header nav{
+		float: right;
+		margin-right: 10px;
+	}
+}
+
 /* Mobile */
 @media screen and (max-width: 845px){
+    header .logo img{
+        margin-left: 10px;
+        margin-top: 10px;
+		height: auto;
+        width: 200px;
+    }
     header nav .menu-toggle{
         display: initial;
         position: fixed;
-        left: 20px;
+        right: 5px;
         top: 0;
-        font-size: 26px;
+        font-size: 36px;
         line-height: 65px;
         font-family: 'SegoeMDL2';
         color: #fff;
@@ -247,50 +309,38 @@ footer .copyright a{
     }
 	header nav{
 		position: fixed;
-		top: 65px;
-		left: -100%;
-		width: 75%;
-		max-width: 250px;
-		height: 100%;
+		top: 100%;
+		left: 0;
+		width: 100%;
 		margin: 0;
 		-webkit-transition: all 200ms ease-in-out;
         -moz-transition: all 200ms ease-in-out;
         -o-transition: all 200ms ease-in-out;
         -ms-transition: all 200ms ease-in-out;
         transition: all 200ms ease-in-out;
-		background: #34495E;
 	}
 	header .open{
-		left: 0;
+		top: 65px;
 	}
 	header nav ul{
 		width: 100%;
 		padding: 0;
 		margin: 0;
+		background: url('../img/title.jpg') center fixed;
+		background-size: cover;
 	}
 	header nav ul li {
 		display: block;
-		width: calc(100% - 25px);
+		width: 100%;
 		height: 35px;
 		padding: 0;
 		margin: 0;
-		padding-left: 25px;
-		font-size: 18px;
-		text-align: left
-	}
-	header nav ul li a{
-		padding: 0;
-		line-height: 35px;
-		height: 35px;
-	}
-	header nav ul li.selected{
-		background: #22A7F0;
-	}
-	header nav ul li.selected a{
-		background: none;
+		background-color: rgba(0, 0, 0, 0.15);
+		text-align: center;
 	}
 	#title{
-		height: 65px;
+		margin-top: 65px;
+		height: 80px;
 	}
 	#title h1{
 		font-size: 26px;
@@ -298,9 +348,6 @@ footer .copyright a{
 	}
 	#title h2{
 		display: none;
-	}
-	article{
-	    padding-top: 45px;
 	}
 	#main{
 		max-width: 100%;
