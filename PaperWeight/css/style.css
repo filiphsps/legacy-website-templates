@@ -321,8 +321,9 @@ footer .copyright a{
 		height: 80px;
 	}
 	#title h1{
+		padding: 20px 0 0 0;
 		font-size: 26px;
-		line-height: 80px;
+		line-height:26px;
 	}
 	#title h2{
 		display: none;
